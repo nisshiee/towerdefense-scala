@@ -6,16 +6,16 @@ version := "1.0.0-SNAPSHOT"
 
 scalaVersion := "2.10.1"
 
-libraryDependencies := Seq(
+libraryDependencies ++= Seq(
   // "org.scalaz" %% "scalaz-core" % "7.0.0-RC2"
    "org.specs2" %% "specs2" % "1.14" % "test"
-  //,"org.typelevel" %% "scalaz-specs2" % "0.1.3"
+  //,"org.typelevel" %% "scalaz-specs2" % "0.1.3" % "test"
   ,"org.mockito" % "mockito-all" % "1.9.5" % "test"
   ,"junit" % "junit" % "4.11" % "test"
   ,"org.pegdown" % "pegdown" % "1.2.1" % "test"
 )
 
-scalacOptions <<= scalaVersion.map { sv =>
+scalacOptions <++= scalaVersion.map { sv =>
   if (sv.startsWith("2.10")) {
     Seq(
       "-deprecation",
@@ -36,7 +36,7 @@ scalacOptions <<= scalaVersion.map { sv =>
 testOptions in (Test, test) += Tests.Argument("console", "html", "junitxml")
 
 initialCommands := """
-import org.nisshiee.towerdifence_scala
+import org.nisshiee.towerdefencescala._
 """
 
 
@@ -86,5 +86,4 @@ scalacOptions in (Compile, doc) <++= baseDirectory.map {
   bd => Seq("-sourcepath", bd.getAbsolutePath,
             "-doc-source-url", "https://github.com/nisshiee/towerdefence-scala/blob/master€{FILE_PATH}.scala")
 }
-
 
