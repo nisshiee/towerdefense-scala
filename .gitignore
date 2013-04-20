@@ -34,8 +34,6 @@ project/boot/
 # ctags
 TAGS
 
-/lib
-
 # switch to regexp syntax.
 #  syntax: regexp
 #  ^\.pc/
