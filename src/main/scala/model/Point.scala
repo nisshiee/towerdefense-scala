@@ -1,4 +1,4 @@
-package org.nisshiee.towerdefencescala
+package org.nisshiee.towerdefensescala
 
 case class Point(x: Int, y: Int)
 

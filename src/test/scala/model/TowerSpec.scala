@@ -1,4 +1,4 @@
-package org.nisshiee.towerdefencescala
+package org.nisshiee.towerdefensescala
 
 import org.specs2._, matcher.DataTables
 
