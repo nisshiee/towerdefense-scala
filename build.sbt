@@ -1,4 +1,4 @@
-name := "towerdefence-scala"
+name := "towerdefense-scala"
 
 organization := "org.nisshiee"
 
@@ -36,7 +36,7 @@ scalacOptions <++= scalaVersion.map { sv =>
 testOptions in (Test, test) += Tests.Argument("console", "html", "junitxml")
 
 initialCommands := """
-import org.nisshiee.towerdefencescala._
+import org.nisshiee.towerdefensescala._
 """
 
 
@@ -57,7 +57,7 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-  <url>https://github.com/nisshiee/towerdefence-scala</url>
+  <url>https://github.com/nisshiee/towerdefense-scala</url>
   <licenses>
     <license>
       <name>The MIT License (MIT)</name>
@@ -66,8 +66,8 @@ pomExtra := (
     </license>
   </licenses>
   <scm>
-    <url>git@github.com:nisshiee/towerdefence-scala.git</url>
-    <connection>scm:git:git@github.com:nisshiee/towerdefence-scala.git</connection>
+    <url>git@github.com:nisshiee/towerdefense-scala.git</url>
+    <connection>scm:git:git@github.com:nisshiee/towerdefense-scala.git</connection>
   </scm>
   <developers>
     <developer>
@@ -84,6 +84,6 @@ pomExtra := (
 
 scalacOptions in (Compile, doc) <++= baseDirectory.map {
   bd => Seq("-sourcepath", bd.getAbsolutePath,
-            "-doc-source-url", "https://github.com/nisshiee/towerdefence-scala/blob/master€{FILE_PATH}.scala")
+            "-doc-source-url", "https://github.com/nisshiee/towerdefense-scala/blob/master€{FILE_PATH}.scala")
 }
 

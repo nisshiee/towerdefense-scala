@@ -1,4 +1,4 @@
-package org.nisshiee.towerdefencescala
+package org.nisshiee.towerdefensescala
 
 sealed trait Tower
 case object WeakTower extends Tower
