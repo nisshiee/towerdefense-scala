@@ -29,7 +29,8 @@ scalacOptions <++= scalaVersion.map { sv =>
       "-language:higherKinds",
       "-language:existentials",
       "-language:reflectiveCalls",
-      "-language:experimental.macros"
+      "-language:experimental.macros",
+      "-Xfatal-warnings"
     )
   } else {
     Seq("-deprecation")

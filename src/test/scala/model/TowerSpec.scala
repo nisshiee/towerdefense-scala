@@ -14,7 +14,8 @@ class TowerSpec extends Specification with DataTables { def is =
     WeakTower      !          5 |
     StrongTower    !        100 |
     WideRangeTower !         50 |
-    BombTower      !        100 |> { (t, expected) =>
+    BombTower      !        100 |
+    HighBombTower  !       1000 |> { (t, expected) =>
       t.cost must equalTo(expected)
     }
 
@@ -23,7 +24,8 @@ class TowerSpec extends Specification with DataTables { def is =
     WeakTower      !          1 |
     StrongTower    !          3 |
     WideRangeTower !          1 |
-    BombTower      !          1 |> { (t, expected) =>
+    BombTower      !          1 |
+    HighBombTower  !          3 |> { (t, expected) =>
       t.attack must equalTo(expected)
     }
 }
