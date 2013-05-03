@@ -7,15 +7,66 @@ class ConversionsSpec extends Specification with DataTables { def is =
   "Conversions"                                                                 ^
     "Scala => Java"                                                             ^
       "Point"                                                                   ! e1^
+      "Tower"                                                                   ! e2^
+      "Command"                                                                 ! e3^
+      "Seq[Command]"                                                            ! e4^
                                                                                 end
 
   import Conversions._
-  import system.FieldPoint
+  import system.{
+     FieldPoint => JPoint
+    ,TowerType => JTower
+    ,Command => JCommand
+  }
+  import java.util.{ List => JList }
 
   def e1 = {
     val p = Point(2, 3)
-    val fp: FieldPoint = p
+    val jp: JPoint = p
 
-    (fp.getX, fp.getY) must equalTo { (2, 3) }
+    (jp.getX, jp.getY) must equalTo { (2, 3) }
+  }
+
+  def e2 =
+    "tower"        | "jtower"              |
+    WeakTower      ! JTower.WEAKTOWER      |
+    StrongTower    ! JTower.STRONGTOWER    |
+    WideRangeTower ! JTower.WIDERANGETOWER |
+    BombTower      ! JTower.BOMBTOWER      |
+    HighBombTower  ! JTower.HIGHBOMBTOWER  |> { (tower, jtower) =>
+      val jt: JTower = tower
+      jt must equalTo(jtower)
+    }
+
+  def e3 = {
+    val c = Command(Point(2, 3), BombTower)
+    val jc: JCommand = c
+
+    val jp = reflectionCall(jc, "getFieldPoint") match {
+      case p: JPoint => (p.getX, p.getY)
+      case _ => (-1, -1)
+    }
+    val jt = reflectionCall(jc, "getTowerType")
+
+    val expectedPoint = (2, 3)
+    val expectedTower: JTower = BombTower
+
+    (jp must equalTo(expectedPoint)) and (jt must equalTo(expectedTower))
+  }
+
+  def e4 = {
+    val cl: Seq[Command] = Command(Point(2, 3), BombTower) :: Nil
+    val jl: JList[JCommand] = cl
+
+    jl.size must equalTo(cl.size)
+  }
+
+  def reflectionCall(c: JCommand, method: String) = {
+    import scala.reflect.runtime.universe
+    val mirror = universe.runtimeMirror(c.getClass.getClassLoader)
+    val methodSymbol = universe.typeOf[JCommand].declaration(universe.newTermName(method)).asMethod
+    val instanceMirror = mirror.reflect(c)
+    val methodMirror = instanceMirror.reflectMethod(methodSymbol)
+    methodMirror()
   }
 }
