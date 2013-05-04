@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>towerdefense-scala by nisshiee</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>towerdefense-scala</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/nisshiee/towerdefense-scala">View the Project on GitHub <small>nisshiee/towerdefense-scala</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nisshiee/towerdefense-scala/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nisshiee/towerdefense-scala/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nisshiee/towerdefense-scala">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><a href="https://travis-ci.org/nisshiee/towerdefense-scala"><img src="https://travis-ci.org/nisshiee/towerdefense-scala.png?branch=master" alt="Build Status"></a></p>
+
+<h2>how to use</h2>
+
+<h3>sbt dependency</h3>
+
+<pre><code>libraryDependencies += "org.nisshiee" %% "towerdefense-scala" % "1.0.0"
+</code></pre>
+
+<h3>Playerの実装</h3>
+
+<p>org.nisshiee.towerdefensescala.Playerを継承することで、
+Sampleと同様にJavaからオブジェクトを生成して動作させることができるPlayerを実装できます。</p>
+
+<p>例：</p>
+
+<div class="highlight"><pre><span class="k">import</span> <span class="nn">org.nisshiee.towerdefensescala._</span>
+
+<span class="k">class</span> <span class="nc">MyPlayer</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Player</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">init</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="k">def</span> <span class="n">action</span><span class="k">:</span> <span class="o">((</span><span class="kt">Snapshot</span><span class="o">,</span> <span class="kt">Int</span><span class="o">))</span> <span class="k">=&gt;</span> <span class="o">((</span><span class="nc">Seq</span><span class="o">[</span><span class="kt">Command</span><span class="o">],</span> <span class="nc">Int</span><span class="o">))</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="o">(</span><span class="n">snapshot</span><span class="o">,</span> <span class="n">turn</span><span class="o">)</span> <span class="k">=&gt;</span>
+      <span class="nc">List</span><span class="o">(</span><span class="nc">Command</span><span class="o">(</span><span class="nc">Point</span><span class="o">(</span><span class="n">turn</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span> <span class="nc">WeakTower</span><span class="o">))</span> <span class="o">-&gt;</span> <span class="o">(</span><span class="n">turn</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>デフォルトコンストラクタの引数 <code>name: String</code> は、
+Javaからの呼び出しに合わせるため、おそらく必須です。</p>
+
+<p>Player abstract classは、型パラメータAを持っています。
+Aは、actionの呼び出しを超えて引き継げる"状態"の型です。
+この例ではIntを指定していますが、独自の型を指定できます。</p>
+
+<p>initには、初回のaction呼び出し時に渡される"状態"を指定します。</p>
+
+<p>actionが、AI部分です。
+「ゲームの状態と、Playerの状態を受け取り、Commandと次のPlayerの状態を返す」関数を実装します。</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nisshiee">nisshiee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
