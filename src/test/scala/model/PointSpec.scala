@@ -5,21 +5,11 @@ import org.specs2._, matcher.DataTables
 class PointSpec extends Specification with DataTables { def is =
 
   "Point"                                                                       ^
-    "implicit conversion to FieldPoint"                                         ! e1^
     "isIn"                                                                      ^
       "x, yのいずれかがleft, top未満の場合はfalse"                              ! e2^
       "xがleft + width以上、またはyがtop + height以上の場合はfalse"             ! e3^
       "それ以外で、x,yがいずれもRectangleの範囲内の場合はtrue"                  ! e4^
                                                                                 end
-
-  def e1 = {
-    import system.FieldPoint
-
-    val p = Point(2, 3)
-    val fp: FieldPoint = p
-
-    (fp.getX, fp.getY) must equalTo { (2, 3) }
-  }
 
   implicit lazy val TupleRectangle = new Rectangle[(Int, Int, Int, Int)] {
     def top(a: (Int, Int, Int, Int)) = a._1

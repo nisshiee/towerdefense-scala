@@ -4,10 +4,6 @@ case class Point(x: Int, y: Int)
 
 object Point {
 
-  import system.{ FieldPoint => JPoint }
-
-  implicit def asJava(p: Point): JPoint = new JPoint(p.x, p.y)
-
   implicit class RichPoint(val underlying: Point) extends AnyVal {
 
     def isIn[R](r: R)(implicit ins: Rectangle[R]) = {

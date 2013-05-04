@@ -13,6 +13,7 @@ libraryDependencies ++= Seq(
   // "org.scalaz" %% "scalaz-core" % "7.0.0-RC2"
   ,"org.specs2" %% "specs2" % "1.14" % "test"
   //,"org.typelevel" %% "scalaz-specs2" % "0.1.3" % "test"
+  ,"org.scala-lang" % "scala-reflect" % "2.10.1" % "test"
   ,"org.mockito" % "mockito-all" % "1.9.5" % "test"
   ,"junit" % "junit" % "4.11" % "test"
   ,"org.pegdown" % "pegdown" % "1.2.1" % "test"
