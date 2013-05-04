@@ -13,6 +13,10 @@ how to use
 libraryDependencies += "org.nisshiee" %% "towerdefense-scala" % "1.0.0"
 ```
 
+### Scaladoc
+
+http://nisshiee.github.io/towerdefense-scala/doc/1.0.0/
+
 ### Playerの実装
 
 org.nisshiee.towerdefensescala.Playerを継承することで、

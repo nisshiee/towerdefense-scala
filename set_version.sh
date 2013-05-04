@@ -13,3 +13,4 @@ cd "$ROOTDIR"
 
 sed -i '/^version := /c\version := "'$1'"' build.sbt
 sed -i '/^libraryDependencies/c\libraryDependencies += "org.nisshiee" %% "towerdefense-scala" % "'$1'"' README.md
+sed -i '/^http:\/\/nisshiee\.github\.io\/towerdefense-scala\/doc\//c\http://nisshiee.github.io/towerdefense-scala/doc/'$1'/' README.md
