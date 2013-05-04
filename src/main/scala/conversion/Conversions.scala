@@ -55,7 +55,7 @@ object Conversions {
     val towers = for {
       x <- 0 until width
       y <- 0 until height
-      tower: Tower <- Option[Tower](jf.getTowerTypeAt(x, y)).toList
+      tower <- Option[JTower](jf.getTowerTypeAt(x, y)).toList map towerAsScala
     } yield Point(x, y) -> tower
 
     Field(width, height, tiles.toMap, towers.toMap)
