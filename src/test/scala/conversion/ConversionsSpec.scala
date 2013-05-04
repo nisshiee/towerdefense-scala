@@ -10,6 +10,10 @@ class ConversionsSpec extends Specification with DataTables { def is =
       "Tower"                                                                   ! e2^
       "Command"                                                                 ! e3^
       "Seq[Command]"                                                            ! e4^
+                                                                                p^
+    "Java => Scala"                                                             ^
+      "Tile"                                                                    ! e5^
+      "Tower"                                                                   ! e6^
                                                                                 end
 
   import Conversions._
@@ -17,6 +21,7 @@ class ConversionsSpec extends Specification with DataTables { def is =
      FieldPoint => JPoint
     ,TowerType => JTower
     ,Command => JCommand
+    ,FieldState => JTile
   }
   import java.util.{ List => JList }
 
@@ -69,4 +74,25 @@ class ConversionsSpec extends Specification with DataTables { def is =
     val methodMirror = instanceMirror.reflectMethod(methodSymbol)
     methodMirror()
   }
+
+  def e5 =
+    "value"     | "expected" |
+    JTile.BLOCK ! Block      |
+    JTile.GOAL  ! Goal       |
+    JTile.PLAIN ! Plain      |
+    JTile.START ! Start      |> { (value, expected) =>
+      val actual: Tile = value
+      actual must equalTo(expected)
+    }
+
+  def e6 =
+    "value"               | "expected"     |
+    JTower.WEAKTOWER      ! WeakTower      |
+    JTower.STRONGTOWER    ! StrongTower    |
+    JTower.WIDERANGETOWER ! WideRangeTower |
+    JTower.BOMBTOWER      ! BombTower      |
+    JTower.HIGHBOMBTOWER  ! HighBombTower  |> { (value, expected) =>
+      val actual: Tower = value
+      actual must equalTo(expected)
+    }
 }
