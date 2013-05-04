@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>towerdefensescala - org.nisshiee.towerdefensescala</title>
+          <meta name="description" content="towerdefensescala - org.nisshiee.towerdefensescala" />
+          <meta name="keywords" content="towerdefensescala org.nisshiee.towerdefensescala" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'org.nisshiee.towerdefensescala.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="org">org</a>.<a href="../package.html" class="extype" name="org.nisshiee">nisshiee</a></p>
+        <h1>towerdefensescala</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">towerdefensescala</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.nisshiee.towerdefensescala.Command" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CommandextendsProductwithSerializable"></a>
+      <a id="Command:Command"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Command.html"><span class="name">Command</span></a><span class="params">(<span name="point">point: <a href="Point.html" class="extype" name="org.nisshiee.towerdefensescala.Point">Point</a></span>, <span name="tower">tower: <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Field" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FieldextendsProductwithSerializable"></a>
+      <a id="Field:Field"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Field.html"><span class="name">Field</span></a><span class="params">(<span name="_width">_width: <span class="extype" name="scala.Int">Int</span></span>, <span name="_height">_height: <span class="extype" name="scala.Int">Int</span></span>, <span name="_tiles">_tiles: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="Point.html" class="extype" name="org.nisshiee.towerdefensescala.Point">Point</a>, <a href="Tile.html" class="extype" name="org.nisshiee.towerdefensescala.Tile">Tile</a>]</span>, <span name="_towers">_towers: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="Point.html" class="extype" name="org.nisshiee.towerdefensescala.Point">Point</a>, <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Player" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Player[A]extendsAbstractPlayer"></a>
+      <a id="Player[A]:Player[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Player.html"><span class="name">Player</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="system.AbstractPlayer">AbstractPlayer</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Point" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PointextendsProductwithSerializable"></a>
+      <a id="Point:Point"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Point.html"><span class="name">Point</span></a><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Rectangle" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Rectangle[A]extendsAnyRef"></a>
+      <a id="Rectangle[A]:Rectangle[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Rectangle.html"><span class="name">Rectangle</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Snapshot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SnapshotextendsProductwithSerializable"></a>
+      <a id="Snapshot:Snapshot"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Snapshot.html"><span class="name">Snapshot</span></a><span class="params">(<span name="_field">_field: <a href="Field.html" class="extype" name="org.nisshiee.towerdefensescala.Field">Field</a></span>, <span name="_life">_life: <span class="extype" name="scala.Int">Int</span></span>, <span name="_money">_money: <span class="extype" name="scala.Int">Int</span></span>, <span name="_score">_score: <span class="extype" name="scala.Int">Int</span></span>, <span name="_level">_level: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Tile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TileextendsAnyRef"></a>
+      <a id="Tile:Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Tile.html"><span class="name">Tile</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Tower" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TowerextendsAnyRef"></a>
+      <a id="Tower:Tower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Tower.html"><span class="name">Tower</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="org.nisshiee.towerdefensescala.Block" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Block"></a>
+      <a id="Block:Block"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Block$.html"><span class="name">Block</span></a><span class="result"> extends <a href="Tile.html" class="extype" name="org.nisshiee.towerdefensescala.Tile">Tile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.BombTower" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BombTower"></a>
+      <a id="BombTower:BombTower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BombTower$.html"><span class="name">BombTower</span></a><span class="result"> extends <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Conversions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Conversions"></a>
+      <a id="Conversions:Conversions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Conversions$.html"><span class="name">Conversions</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Field" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Field"></a>
+      <a id="Field:Field"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Field$.html"><span class="name">Field</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Goal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Goal"></a>
+      <a id="Goal:Goal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Goal$.html"><span class="name">Goal</span></a><span class="result"> extends <a href="Tile.html" class="extype" name="org.nisshiee.towerdefensescala.Tile">Tile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.HighBombTower" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HighBombTower"></a>
+      <a id="HighBombTower:HighBombTower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="HighBombTower$.html"><span class="name">HighBombTower</span></a><span class="result"> extends <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Plain" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Plain"></a>
+      <a id="Plain:Plain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Plain$.html"><span class="name">Plain</span></a><span class="result"> extends <a href="Tile.html" class="extype" name="org.nisshiee.towerdefensescala.Tile">Tile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Point" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Point"></a>
+      <a id="Point:Point"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Point$.html"><span class="name">Point</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Snapshot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Snapshot"></a>
+      <a id="Snapshot:Snapshot"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Snapshot$.html"><span class="name">Snapshot</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Start" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Start"></a>
+      <a id="Start:Start"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Start$.html"><span class="name">Start</span></a><span class="result"> extends <a href="Tile.html" class="extype" name="org.nisshiee.towerdefensescala.Tile">Tile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.StrongTower" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StrongTower"></a>
+      <a id="StrongTower:StrongTower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StrongTower$.html"><span class="name">StrongTower</span></a><span class="result"> extends <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Tile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tile"></a>
+      <a id="Tile:Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Tile$.html"><span class="name">Tile</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.Tower" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tower"></a>
+      <a id="Tower:Tower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Tower$.html"><span class="name">Tower</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.WeakTower" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WeakTower"></a>
+      <a id="WeakTower:WeakTower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WeakTower$.html"><span class="name">WeakTower</span></a><span class="result"> extends <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.nisshiee.towerdefensescala.WideRangeTower" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WideRangeTower"></a>
+      <a id="WideRangeTower:WideRangeTower"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WideRangeTower$.html"><span class="name">WideRangeTower</span></a><span class="result"> extends <a href="Tower.html" class="extype" name="org.nisshiee.towerdefensescala.Tower">Tower</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
