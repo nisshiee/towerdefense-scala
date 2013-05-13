@@ -2,14 +2,14 @@ name := "towerdefense-scala"
 
 organization := "org.nisshiee"
 
-version := "1.0.0"
+version := "1.0.1"
 
 scalaVersion := "2.10.1"
 
 resolvers += "Towerdefense Repo" at "http://towerdefense-repo.herokuapp.com/"
 
 libraryDependencies ++= Seq(
-   "jp.ac.nagoya-u.itc.mase" % "tower-defense" % "1.2.0"
+   "jp.ac.nagoya-u.itc.mase" % "tower-defense" % "1.3.0"
   // "org.scalaz" %% "scalaz-core" % "7.0.0-RC2"
   ,"org.specs2" %% "specs2" % "1.14" % "test"
   //,"org.typelevel" %% "scalaz-specs2" % "0.1.3" % "test"
@@ -89,6 +89,7 @@ pomExtra := (
 
 scalacOptions in (Compile, doc) <++= baseDirectory.map {
   bd => Seq("-sourcepath", bd.getAbsolutePath,
-            "-doc-source-url", "https://github.com/nisshiee/towerdefense-scala/blob/master€{FILE_PATH}.scala")
+            "-doc-source-url", "https://github.com/nisshiee/towerdefense-scala/blob/master€{FILE_PATH}.scala",
+            "-implicits", "-diagrams")
 }
 
