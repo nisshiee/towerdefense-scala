@@ -16,6 +16,7 @@ abstract class Player[A](name: String) extends JPlayer(name) {
 
   override def getCommands: JList[JCommand] = {
     val snapshot: Snapshot = getGameInfo
+    implicit val f: Field = snapshot.field
     val state = _stateOpt getOrElse init
     val (commands, nextState): (Seq[Command], A) = action((snapshot, state))
     _stateOpt = Some(nextState)
