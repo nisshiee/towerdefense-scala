@@ -22,11 +22,14 @@ object Conversions {
     case HighBombTower => JTower.HIGHBOMBTOWER
   }
 
-  implicit def commandAsJava(c: Command): JCommand = new JCommand(c.point, c.tower)
+  implicit def commandAsJava(c: Command)(implicit f: Field): Seq[JCommand] = {
+    val Command(p, _) = c
+    f.tower(p).toSeq.map { _ => new JCommand(p, null) } :+ new JCommand(p, c.tower)
+  }
 
-  implicit def commandSeqAsJava(seq: Seq[Command]): JList[JCommand] = {
+  implicit def commandSeqAsJava(seq: Seq[Command])(implicit f: Field): JList[JCommand] = {
     import scala.collection.JavaConverters._
-    seq.map(commandAsJava).asJava
+    seq.flatMap(commandAsJava).asJava
   }
 
   implicit def tileAsScala(jt: JTile): Tile = jt match {
