@@ -10,12 +10,12 @@ how to use
 ### sbt dependency
 
 ```
-libraryDependencies += "org.nisshiee" %% "towerdefense-scala" % "1.0.2-SNAPSHOT"
+libraryDependencies += "org.nisshiee" %% "towerdefense-scala" % "1.0.2"
 ```
 
 ### Scaladoc
 
-http://nisshiee.github.io/towerdefense-scala/doc/1.0.2-SNAPSHOT/
+http://nisshiee.github.io/towerdefense-scala/doc/1.0.2/
 
 ### Playerの実装
 
